@@ -4,10 +4,10 @@ La dirección de GitHub para este repositorio es la siguiente: [GitHub](https://
 
 ## Índice
 
-- [🔰 Introducción](#introducción)
-- [🧮 Datos](#datos)
-- [🗃️ Archivos](#archivos)
-- [🚀 Ejecución](#ejecución)
+- [🔰 Introducción](#-introducción)
+- [🧮 Datos](#-datos)
+- [🗃️ Archivos](#-archivos)
+- [🚀 Ejecución](#-ejecución)
 
 ## 🔰 Introducción
 
