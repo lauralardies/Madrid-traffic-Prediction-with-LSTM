@@ -1,6 +1,6 @@
 # Predicción del tráfico de Madrid con LSTM
 
-La dirección de GitHub para este repositorio es la siguiente: [GitHub](https://github.com/lauralardies/Madrid-traffic-Prediction-with-LSTM).
+La dirección de GitHub para este repositorio es la siguiente: [Repositorio](https://github.com/lauralardies/Madrid-traffic-Prediction-with-LSTM).
 
 ## Índice
 
@@ -11,7 +11,9 @@ La dirección de GitHub para este repositorio es la siguiente: [GitHub](https://
 
 ## 🔰 Introducción
 
-En este proyecto se trata de predecir el tráfico de Madrid, modelando una red neuronal LSTM, arquitectura capaz de captar patrones temporales a partir de secuencias de datos. Se hace esto con el objetivo de reducir las congestiones, reduciendo también por lo tanto las emisiones y mejorando la calidad de vida de los ciudadanos. A partir del modelo entrenado, se realizan predicciones, las cuales facilitarán la generación una red de carreteras con intensidades (valores predichos) asignadas a los nodos. Y ya por último, se calcula el camino mínimo mediante el algoritmo de Dijkstra, mundialmente conocido y con un costo computacional bajo, además de estimar el tiempo del trayecto basándose en la distancia recorrida (se calcula la distancia euclidea entre dos puntos) y la velocidad media (valor que también predice el modelo). En el repositorio actual se pueden encontrar varios cuadernos de Jupyter con Python y Markdown que, celda por celda, van desarrollando todo el proceso descrito.
+En este proyecto se trata de predecir el tráfico de Madrid, modelando una red neuronal LSTM, arquitectura capaz de captar patrones temporales a partir de secuencias de datos. Se hace esto con el objetivo de reducir las congestiones, reduciendo también por lo tanto las emisiones y mejorando la calidad de vida de los ciudadanos. A partir del modelo entrenado, se realizan predicciones, las cuales facilitarán la generación una red de carreteras con intensidades (valores predichos) asignadas a los nodos. Y ya por último, se calcula el camino mínimo mediante el algoritmo de Dijkstra, mundialmente conocido y con un costo computacional bajo, además de estimar el tiempo del trayecto basándose en la distancia recorrida (se calcula la distancia euclidea entre dos puntos) y la velocidad media (valor que también predice el modelo). 
+
+En el repositorio actual se pueden encontrar varios cuadernos de Jupyter con Python y Markdown que, celda por celda, van desarrollando todo el proceso descrito.
 
 ## 🧮 Datos
 
