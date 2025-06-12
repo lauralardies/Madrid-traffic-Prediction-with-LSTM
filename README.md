@@ -29,7 +29,8 @@ El repositorio está organizado de la siguiente manera:
 - Una carpeta llamada `optimization` desde la cual se hacen todas las simulaciones de cálculo de camino mínimo y estimación de tiempo de trayecto. Se pueden encontrar dos archivos: `graph.ipynb` que se encarga de generar el grafo y actualizar sus intensidades según los valores predichos, y `dijkstra.ipynb` que, a partir del grafo con intensidades, calcula el camino mínimo y estima la hora de salida o llegada, según el caso.
 - Una carpeta llamada `predictions` que contiene tan solo un documento, `prediction.ipynb` que se encarga de cargar un modelo entrenado, hacer las predicciones correspondientes y guardarlas para su uso a posteriori.
 - Una carpeta llamada `process data`, encargada de todo lo que tiene que ver sobre el análisis de datos previo a todo el entrenamiento de modelos y predicciones. Se pueden unir los datos mensuales en un único CSV (`unite_data.ipynb`), visualizar los datos en un mapa (`map_data.ipynb`), generar gráficas de los datos (`visualization.ipynb`) y separar los datos en dsitintos CSVs según su identificador (`separate_data.ipynb`).
-Todos estos archivos y docuemtnos constituyen el código generado para mi trabajo de fin de grado.
+
+Todos estos archivos y documentos constituyen el código generado para mi trabajo de fin de grado.
 
 ## 🚀 Ejecución
 
