@@ -18,6 +18,7 @@ En el repositorio actual se pueden encontrar varios cuadernos de Jupyter con Pyt
 ## 🧮 Datos
 
 Para entrenar un modelo para que prediga el tráfico, se necesita acceso a los siguientes datos:
+
 - Un historial de datos de tráfico de Madrid, a partir de los cuales el modelo aprenderá e identificará patrones para predecir el tráfico correctamente.
 - Datos en tiempo real que se emplean para realizar simulaciones de hora de llegada estimada y recomendaciones de horas de salida a partir de una hora de llegada dada.
 
@@ -26,6 +27,7 @@ Para entrenar un modelo para que prediga el tráfico, se necesita acceso a los s
 ## 🗃️ Archivos
 
 El repositorio está organizado de la siguiente manera:
+
 - Una carpeta general, desde la cual se puede acceder a el códio completo laldama `Traffic`.
 - Una carpeta llamada `models` donde se encuentran las cuatro distintas variaciones de modelos desarrollados a lo largo del estudio: `lstm.ipynb` para la red más básica, `lstm2.ipynb` para una red algo más compleja, `lstm2_cyclical.ipynb` para la misma red anterior pero aplicando transformaciones sobre las variables cíclicas y `lstm_attention.ipynb` algo más sencilla que la anterior (aplicando también la transformación sobre las variables cíclicas) e integrando en la red una capa de atención.
 - Una carpeta llamada `optimization` desde la cual se hacen todas las simulaciones de cálculo de camino mínimo y estimación de tiempo de trayecto. Se pueden encontrar dos archivos: `graph.ipynb` que se encarga de generar el grafo y actualizar sus intensidades según los valores predichos, y `dijkstra.ipynb` que, a partir del grafo con intensidades, calcula el camino mínimo y estima la hora de salida o llegada, según el caso.
@@ -37,6 +39,13 @@ Todos estos archivos y documentos constituyen el código generado para mi trabaj
 ## 🚀 Ejecución
 
 Para que se ejecuten todos los archivos de código correctamente, se debe seguir el siguiente flujo de proceso:
-1º
-2º
-...
+
+1. Descargar los datos del portal de datos abiertos del Ayuntamiento de Madrid y almacenarlos en una nueva carpeta llamada `data`, dentro de `Traffic`. Además, guardar los datos históricos mensuales en otra carpeta dentro de `data` llamada `monthly data`.
+2. Ejecutar el archivo `unite_data.ipynb` para unir en un único CSV las entradas mensuales de datos.
+3. En caso de querer visualizar los datos, ejecutar `map_data.ipynb` y `visualization.ipynb`.
+4. Para preparar los datos para entrenar modelos, ejecutar `separate_data.ipynb`, de esta manera se separan los datos según identificadores.
+5. Ejecutar cualquiera de los modelos que se deseen dentro de la carpeta `models`, pudiendo cambiar el conunto de datos de entrenamiento libremente para cada caso. El modelo y escalador se guardan automáticamente en una carpeta llamada `saved`.
+6. Antes de ejecutar el código de `prediction.ipynb`, ejecutar un modelo para cada set de datos separados en el paso 4 y guardarlo en una carpeta llamada `final` dentro de `models`.
+7. Cuando ya se tiene un modelo por cada punto seleccionado, se pueden realizar las predicciones de `prediction.ipynb`, obteniendo 3 archivos tipo `pkl`.
+8. Una vez hechas las predicciones, se puede generar el grafo y asignarle intensidades, ejecutando el archivo `graph.ipynb` dentro de la carpeta `optimization`.
+9. Con el grafo generado y con ponderaciones, se puede calcular el camino mínimo ejecutando `dijkstra.ipynb`, donde tambén se obtiene la estimación de la duración del trayecto.
